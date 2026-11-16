@@ -7,7 +7,7 @@ int main() {
     printf("Please enter your BMI:");
     scanf("%d", &bmi);
 
-    if (bmi < 0){
+    if (bmi <= 0){
         printf("Invalid BMI");
     }
     else if (bmi < 18.5){
