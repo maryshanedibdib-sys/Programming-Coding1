@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+
+    char trav_class;
+    float bagweight, bagall, basefare;
+    
+    printf("Enter Travel Class Economy (E-conomy/ B-usiness):");
+    scanf(" %c", &trav_class);
+    printf("Enter Baggage Weight (kg):");
+    scanf("%f", &bagweight);
+
+    if (trav_class == 'E' || trav_class == 'e'){
+        printf("Travel Class: Economy\n" "Baggage Weight: %.2f kg\n" "Basefare: PHP2,500.00\n", bagweight  );
+    }
+    else if (trav_class == 'B' || trav_class == 'b'){
+        printf("Travel Class: Business\n"  "Baggage Weight: %.2fkg\n" "Basefare: PHP 6,500.00\n", bagweight);
+    }
+    else {
+        printf("Please Enter Travel Class Economy (E-conomy/ B-usiness).");
+    }
+    return 0;
+}
