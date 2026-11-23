@@ -5,21 +5,34 @@ int main() {
     char travClass;
     float bagWeight, bagAll, baseFare;
 
-    printf("Enter Travel Class Economy (E-conomy/B-uisiness):");
-    scanf(" %c", &travClass);
-    printf ("Enter Baggage Weight (kg):");
-    scanf("%f", &bagWeight);
-
-    if ((travClass == 'E' || travClass == 'e') & (bagWeight <= 20)) {
-        printf("Travel Class: Economy\n" "Basefare: PHP 2,500.00\n" "Baggage Weight: %.2f kg (Allowance: 20 kg)\n", bagWeight);
-    }
-
-    else if((travClass == 'B' || travClass == 'b') & (bagWeight <= 40)){
-        printf("Travel Class: Business\n" "Basefare: PHP 6,500.00\n" "Baggage Weight: %.2f kg (Allowance: 40 kg)\n", bagWeight);
+    //Travel Class Economy
     
+    printf("Enter Travel Class Economy (E-conomy/B-usiness):");
+    scanf(" %c", &travClass);
+
+    if (travClass == 'E' || travClass == 'e') {
+        printf("Travel Class: Economy\n");
+    }
+    else if(travClass == 'B' || travClass == 'b') {
+        printf("Travel Class: Business\n");
     }
     else {
-        printf ("Please Enter Travel Class Economy (E-conomy/B-uisiness)");
+        printf ("Invalid Class Travel!");
+        return  0;
+    }
+    
+    
+    printf("\nBaggage Weight (kg):");
+    scanf(" %f", &bagWeight);
+
+    if (bagWeight <= 20) {
+        printf("Baggage Weight: %.2f kg", bagWeight);
+    }
+    else if(bagWeight <= 40) {
+        printf("Baggage Weight: %.2f kg", bagWeight);
+    }
+    else {
+        printf ("Please Enter Travel Class Economy (E-conomy/B-usiness)");
     }
     
     return 0;
